@@ -1,2 +1,1 @@
-Flask Application for Inventory Management 
-Not complete :(
+Flask Application for Inventory Management , kind of incomplete :(
