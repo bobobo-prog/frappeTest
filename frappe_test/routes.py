@@ -19,7 +19,8 @@ def add_product():
         flash(f'{form.prod_name.data} Added to Inventory!','success')
         return redirect(url_for('add_product'))
 
-    return render_template('addproduct.html',title = 'Add Product',form = form)
+    data = Product().query.filter_by().all()
+    return render_template('addproduct.html',title = 'Add Product',form = form,data = data)
 
 @app.route("/addlocation",methods = ['GET','POST'])
 def add_location():
@@ -31,7 +32,8 @@ def add_location():
         flash(f'{form.loc_id.data} Added to Database!','success')
         return redirect(url_for('add_location'))
 
-    return render_template('addlocation.html',title = 'Add Location',form = form)
+    data = Location().query.filter_by().all()
+    return render_template('addlocation.html',title = 'Add Location',form = form,data = data)
 
 
 @app.route("/addproductmovement",methods = ['GET','POST'])
@@ -43,6 +45,6 @@ def add_prodmovement():
         db.session.commit()
         flash(f'{form.movement_id.data} Added to Database!','success')
         return redirect(url_for('add_prodmovement'))
-
-    return render_template('addproductmovement.html',title = 'Add Movement Data',form = form)
+    data = ProductMovement().query.filter_by().all()
+    return render_template('addproductmovement.html',title = 'Add Movement Data',form = form,data = data)
     

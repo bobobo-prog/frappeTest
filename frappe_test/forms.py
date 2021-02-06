@@ -1,7 +1,7 @@
 
 from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField
-from wtforms.fields.core import IntegerField, TimeField
+from wtforms.fields.core import IntegerField, TimeField 
 from wtforms.validators import DataRequired, data_required,Length
 
 class AddProductForm(FlaskForm):

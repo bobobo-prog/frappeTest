@@ -43,3 +43,36 @@
     </div>
 
 {% endblock graph %}
+
+
+
+{% block about %}
+    
+    <table class="table">
+    <thead>
+        <tr>
+                <th>Movement ID</th>
+                <th>Time Stamp</th>
+                <th>From Location</th>
+                <th>To Location</th>
+                <th>Product ID</th>
+                <th>Quanity</th>        
+        </tr>
+    
+    </thead>
+    
+    <tbody>
+        {% for record in data %}    
+        <tr>
+            <td>{{record.movement_id}}</td>
+            <td>{{record.timestamp}}</td>
+            <td>{{record.from_location}}</td>
+            <td>{{record.to_location}}</td>
+            <td>{{record.product_id}}</td>
+            <td>{{record.quantity}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    
+{% endblock about %}

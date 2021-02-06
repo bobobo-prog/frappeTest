@@ -28,3 +28,26 @@
     </div>
 
 {% endblock graph %}
+
+{% block about %}
+    
+    <table class="table">
+    <thead>
+        <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>        
+        </tr>
+    
+    </thead>
+    
+    <tbody>
+        {% for record in data %}    
+        <tr>
+            <td>{{record.product_id}}</td>
+            <td>{{record.product_name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    
+{% endblock about %}
