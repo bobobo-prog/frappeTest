@@ -52,7 +52,9 @@
     .Bio{
       margin-left:2%;
       font-family: monospace;
+  
     }
+   
     .navbar-brand
     {
       transform: translateX(-70%);
@@ -68,6 +70,10 @@
       min-height: 32em;
       margin: auto;
     }
+    
+    .form-control-label{
+        font-size: large;
+    } 
 
 </style>
 
@@ -78,7 +84,7 @@
   <!-- Navigation -->
   
   <nav class="navbar navbar-expand-lg navbar-inverse static-top">
-    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-leaf" aria-hidden="true" ></span></a>
+    <!--<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-leaf" aria-hidden="true" ></span></a>-->
     
       <div class="container" >
          <a href="{{ url_for('home')}}">
@@ -97,6 +103,12 @@
            Add Location
          </button>
        </a>
+
+       <a href="{{url_for('add_prodmovement')}}">
+        <button  class="button btn-large">
+         Add Movement
+       </button>
+     </a>
         
           </div>  
   </nav>
